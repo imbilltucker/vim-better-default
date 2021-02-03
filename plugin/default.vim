@@ -1,5 +1,5 @@
 " default.vim - Better vim than the default
-" Maintainer:   Liu-Cheng Xu <https://github.com/liuchengxu>
+" Maintainer:   Bill Tucker <https://github.com/imbilltucker>
 " Version:      1.0
 " vim: et ts=2 sts=2 sw=2
 
