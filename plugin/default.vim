@@ -195,7 +195,10 @@ endif
         " flashes when you use these mappings.
         " Quit normal mode
         nnoremap <silent> <Leader>q  :q<CR>
-        nnoremap <silent> <Leader>Q  :qa!<CR>
+        " capital Q is the entry to ex, the standard editor; but we use vim
+        " have Q get rid of trailing whitespace
+        nnoremap Q :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+        
         " Move half page faster
         nnoremap <Leader>d  <C-d>
         nnoremap <Leader>u  <C-u>
