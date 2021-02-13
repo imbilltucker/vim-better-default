@@ -146,6 +146,15 @@ set background=dark         " Assume dark background
 set cursorline              " Highlight current line
 set fileformats=unix,dos,mac        " Use Unix as the standard file type
 
+"use spell checking with english default
+nmap <silent> <Leader>s :set spell<CR>
+nmap <silent> <Leader>S :set spell!<CR>
+
+"set paste
+nmap <silent> <Leader>p :set paste<CR>
+nmap <silent> <Leader>P :set nopaste<CR>
+
+
 "turn line numbers on and off
 nmap <silent> <Leader>n :set nu<CR>
 nmap <silent> <Leader>N :set nu!<CR>
