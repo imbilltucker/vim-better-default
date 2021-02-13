@@ -145,8 +145,15 @@ endif
 set background=dark         " Assume dark background
 set cursorline              " Highlight current line
 set fileformats=unix,dos,mac        " Use Unix as the standard file type
-set number                  " Line numbers on
-set relativenumber          " Relative numbers on
+
+"turn line numbers on and off
+nmap <silent> <Leader>n :set nu<CR>
+nmap <silent> <Leader>N :set nu!<CR>
+
+"set relativenumber          " Relative numbers on
+nmap <silent> <Leader>r :set relativenumber<CR>
+nmap <silent> <Leader>R :set relativenumber!<CR>
+
 set fillchars=stl:\ ,stlnc:\ ,fold:\ ,vert:│
 
 " Annoying temporary files
@@ -287,34 +294,6 @@ endif
       endif
     " }
 
-    " Window {
-      if get(g:, 'vim_better_default_window_key_mapping', 1)
-        nnoremap <Leader>ww <C-W>w
-        nnoremap <Leader>wr <C-W>r
-        nnoremap <Leader>wd <C-W>c
-        nnoremap <Leader>wq <C-W>q
-        nnoremap <Leader>wj <C-W>j
-        nnoremap <Leader>wk <C-W>k
-        nnoremap <Leader>wh <C-W>h
-        nnoremap <Leader>wl <C-W>l
-        if has('nvim') || has('terminal')
-          tnoremap <Leader>wj <C-W>j
-          tnoremap <Leader>wk <C-W>k
-          tnoremap <Leader>wh <C-W>h
-          tnoremap <Leader>wl <C-W>l
-        endif
-        nnoremap <Leader>wH <C-W>5<
-        nnoremap <Leader>wL <C-W>5>
-        nnoremap <Leader>wJ :resize +5<CR>
-        nnoremap <Leader>wK :resize -5<CR>
-        nnoremap <Leader>w= <C-W>=
-        nnoremap <Leader>ws <C-W>s
-        nnoremap <Leader>w- <C-W>s
-        nnoremap <Leader>wv <C-W>v
-        nnoremap <Leader>w\| <C-W>v
-        nnoremap <Leader>w2 <C-W>v
-      endif
-    " }
 
   endif
 
